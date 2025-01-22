@@ -19,13 +19,13 @@ Częstotliwość Nyquista - połowa F<sub>S</sub>
 Z właściwości transformaty Fouriera wiadomo, że widmo sygnału dyskretnego jest okresowe (co f<sub>s</sub> się powtarza). A więc jeżeli się próbkuje sygnał z częstotliwocią niższą od częstotliwości Nyquista zajdzie zjawisko aliasingu i wynikowo widma zaczną na siebie zachodzić.
 
 Sygnał analogowy podstawowo-pasmowy jest sygnałem ograniczonym pasmowo o widmie ulokowanym wokół częstotliwości zerowej. Widmo w funkcji częstotliwości:
-![obrazek](1.1.PNG)
+![obrazek](images/1.1.PNG)
 
 A więc żeby spróbkować sygnał podstawowo-pasmowy wystarczy zastosować twierdzenie Nyquista o próbkowaniu sygnałów.
 
 Sygnał pasmowy jest to sygnał o ograniczonym widmie ulokowanym wokół częstotliwości +f.
 Widmo w funkcji częstotliwości:
-![obrazek](1.2.PNG)
+![obrazek](images/1.2.PNG)
 
 Zastosowania twierdzenia Nyquista o próbkowaniu sygnałów dla tego sygnału jest nieefektywne. W przypadku takich sygnałów możliwe jest takie dobranie szybkości próbkowania mniejszej od szybkości Nyquista, które zapewnia zachowanie nie zniekształconego widma sygnału przesuniętego jedynie w dziedzinie częstotliwości i w niektórych przypadkach widmie odwróconym w częstotliwości. Wynika to z faktu, że podczas podpróbkowania zachodzi zjawisko aliasingu, czyli sygnały "podszywają się" pod sygnały o innych częstotliwościach. Takie próbkowanie sygnału nazywa się podpróbkowaniem.
 
@@ -46,9 +46,9 @@ DTFT (Discrete Time Fourier Transform) - dyskretno-czasowe przekształcenie Four
 DFT (Discrete Fourier Transform) - dyskretne przekształcenie Fouriera
 FFT (Fast Fourier Transform) - szybkie przekształcenie Fouriera
 
-![obrazek](2.1.PNG)
+![obrazek](images/2.1.PNG)
 
-![obrazek](2.2.PNG)
+![obrazek](images/2.2.PNG)
 
 ## 3. Twierdzenia Schannona i ich interpretacje.
 ## 4. Usługi w sieci telekomunikacyjnej - klasyfikacja, charakterystyki, jakość usług.
@@ -84,12 +84,12 @@ Przykładowe mechanizmy zapewniające jakość usług polegają na:
 ## 5. Narysuj schemat blokowy i omów działanie łącza radiowego.
 Łącze radiowe - zestaw urządzeń służący do przesyłania i odbierania sygnału radiowego oraz środowisko propagacji, służy do nadawania i odbierania informacji za pośrednictwem fal radiowych, na wyjściu części odbiorczej nigdy nie pojawi się w 100% ta sama informacja, która została wprowadzona na wejście części nadawczej, działa poprawnie, gdy informacja jest odtwarzana z dostatecznie wymaganą dokładnością, określoną w systemach analogowych jako stosunek natężenia sygnału do natężenia szumu (S/N) na wyjściu odbiornika, a wsystemach cyfrowych poprzez Pb.
 
-![obrazek](5.1.PNG)
+![obrazek](images/5.1.PNG)
 
 Nadajnik: Informacja I (np. ludzki głos) jest wprowadzana do przetwornika nadawczego P<sub>N</sub> i przetwarzana na sygnał elektryczny s(t) o małej częstotliwości i bardzo niskiej mocy. Wzmacniaczem małej częstotliwości nadaje sygnałowi s(t) poziom energetyczny pozwalający na przeniesienie go w pasmo wysokich częstotliwości i następnie po przejściu przez filtr dolnoprzepustowy wprowadza do przetwornika małuch częstotliwości na wysokie częstotliwości, gdzie powstaje sygnał radiowy r(t) o wysokiej częstotliwości. Następnie sygnał przechodzi przez filtr pasmowoprzepustowy.
 Jego poziom energetyczny jest zbyt niski by mógł być bezpośrednio wypromieniowany do środowiska propagacji, więc wzmacniacz wysokiej częstotliwości nadaje mu odpowiednią moc P<sub>N</sub> i poprzez antenę nadawczą A<sub>N</sub> sygnał jest wysyłany w świat.
 
-![obrazek](5.2.PNG)
+![obrazek](images/5.2.PNG)
 
 Odbiornik: Sygnał w postaci fali elektromagnetycznej jest odbierany ze środowiska propagacji przez antenę odbiorczą A<sub>o</sub>, w wyniku czego powstaje sygnał radiowy r'(t) o wysokiej częstotliwości (nieco zmieniony w stosunku do oryginalnego sygnału r(t) przez zjawiska występujące w środowisku propagacji). Ze względu na odległość pomiędzy częścią odbiorczą a nadawczą łącza, sygnał r'(t) ma niską moc, tymczasem dla poprawnego działania modułu przenoszącego sygnał w pasmo małych częstotliwości moc ta musi być odpowiednio wysoka. Zapewnia to wzmacniacz wysokiej częstotliwości. Sygnał przechodzi przez filtr pasmowoprzepustowy następnie przechodzi przez przetwornik częstotliwości. Sygnał podstawowy s'(t) o małej częstotliwości i mocy, który następnie przechodzi przez filtr dolnoprzepustowy. Poziom energetyczny potrzebny do poprawnej pracy przetwornika odbiorczego P<sub>o</sub> uzyskuje się we wzmacniaczu małej częstotliwości. Na wyjściu ostatniego modułu pojawia się informacja I'.
 
@@ -140,7 +140,7 @@ Wspólny emiter (CE):
 - rezystancja wejściowa jest rzędu kilkuset Ohm
 - duża rezystancja wyjściowa
 - małe pasmo przenoszenia częstotliwości
-![obrazek](7.1.PNG)
+![obrazek](images/7.1.PNG)
 
 Wspólna baza:
 - nadaje się najlepiej do pracy na wysokich częstotliwościach
@@ -154,7 +154,7 @@ Wspólna baza:
 - bardzo duża rezystancja wyjściowa
 - duże pasmo przenoszenia
 - sygnały wyjściowe są zgodne w fazie z wejściowymi
-![obrazek](7.2.PNG)
+![obrazek](images/7.2.PNG)
 
 Wspólny kolektor:
 - stosowany jest jako stopień wyjściowy we wzmacniaczach wielostopniowych
@@ -168,7 +168,7 @@ Wspólny kolektor:
 - duża rezystancja wejściowa
 - mała rezystancja wyjściowa
 - średnie pasmo przenoszenia
-![obrazek](7.3.PNG)
+![obrazek](images/7.3.PNG)
 
 Wspólne źródło:
 - stosowane w zakresie małych częstotliwości
@@ -179,7 +179,7 @@ Wspólne źródło:
 - odwrócenie fazy o 180 stopni
 - bardzo duża impedancja wejściowa
 - duża impedancja wyjściowa (niepożądana dla wzmacniaczy napięciowych)
-![obrazek](7.4.PNG)
+![obrazek](images/7.4.PNG)
 
 Wspólna bramka:
 - nadaje się do pracy z wysokimi częstotliwościami
@@ -190,7 +190,7 @@ Wspólna bramka:
 - brak odwrócenia fazy
 - mała impedancja wejściowa (setki Ohm)
 - duża impedancja wyjściowa (pojedyncze kOhm)
-![obrazek](7.5.PNG)
+![obrazek](images/7.5.PNG)
 
 Wspólny dren:
 - stosowany gdy pożądana jest mała pojemność wejściowa oraz konieczność transformacji impedancji
@@ -201,11 +201,145 @@ Wspólny dren:
 - brak odwrócenia fazy
 - bardzo duża impedancja wejściowa (pojedyncze MOhm)
 - mała impedancja wyjściowa (setki Ohm)
-![obrazek](7.6.PNG)
+![obrazek](images/7.6.PNG)
 
 ## 8. Porównanie budowy, właściwości i zastosowań układów FPGA, CPLD.
+| Cechy | CPLD | FPGA |
+|-|-|-|
+| Akronim | Complex Programmable Logic Devices | Field Programmable Gate Array |
+| Wyjaśnienie | złożone układy programowalne | programowalne matryce bramkowe |
+| Struktura | makrokomórek (od kilkudziesięciu do kilkuset), architektura ma strukturę hierarchiczną, niejednorodna | regularnej matrycy bloków logicznych LUT (Look-Up Table), multiplekserów lub bramek logicznych, tablicowa |
+| Ilość zasobów | średnia | duża |
+| Połączenia | narzucona struktura połączeń | duża dowolność łączenia zasobów |
+| Szybkość | duża | średnia |
+| Technologia CMOS | EPROM, EEPROM | SRAM |
+| Budowa | programowalna matryca AND, stała matryca OR, przerzutniki, dodatkowe funktory XOR, pewna liczba programowalnych multiplekserów | bloki zbudowane w oparciu o małą statyczną pamięć RAM, poiędzy poprowadzone są kanały z programowalnymi połączeniami, bloki specjalne (bloki obsługi sygnałów zegara, bloki pamięci, układy mnożące i inne) |
+| Input/Output | makrokomórki są połączone bezpośrednio z końcówkami input/output | bloki bezpośrednio sąsiadujące z końcówkami input/output, jednak w celu połączenia z wyprowadzeniami konieczne jest zastosowanie bloku I/O (który zajmuje miejsce) i wytrasowanie połączenia |
+| Liczba wejść | 16-18 | 4-8 |
+| Liczba wyjść | 4-32 | 1-4 |
+| Skomplikowane funkcje - realizacja | zajmowanie "term" z bloku sąsiadniego za pomocą równoległych układów rozszerzających | szybkie linie kaskadowania i przeniesienia |
+| Bramki logiczne | od 1 do 10 tysięcy bramek logicznych | od 10 tysięcy do kilku milionów |
+| Pamięć | nieulotna, która pozwala na natychmiastowe działanie po uruchomieniu | ulotna, co daje więcej możliwości. Gdy układ ulegnie uszkodzeniu można go wymienić na nowy bez potrzeby uprzedniego programowania |
+| Opóźnienia | ze względu na sposób łączenia elementów opóźnienia sygnałów są w pełni przewidywalne | opóźnienia sygnałów zależą od ilości wykonanych połączeń, a ta z kolei zależy od budowy systemu i zmienia się wraz z projektem (można je oszacować dopiero po syntezie układu) |
+| Zastosowanie | proste układy wymagające dużej szybkości, specyficzne zastosowania jak interfejsy, komparatory, szyfratory, automaty skończone, szyny. Bootloadery (zanik prądu nie powoduje utraty konfiguracji) dla urządze, które nie mają pamięci wewnętrznej | nadają się do tworzenia układów sekwencyjnych, układy przetwarzania informacji i sygnałów (np. w realizacjach algorytmów kryptograficznych), filtry cyfrowe, realizacja układów wykorzystujących arytmetykę rozproszoną |
+| Zalety | makrokomórki wykonują bardziej specjalistyczne operacje logiczne | bardziej elastyczne, możliwe automatyczne przeprogramowanie się układu w celu uzyskania lepszej wydajności w danej chwili |
+
+
 ## 9. Omów relacyjny model danych.
+Dane - zapis, reprezentacja faktów, zapis danych nie posiada kontekstu czy znaczenia
+
+Model danych - jest to zbiór posługiwania się danymi:
+- zbiór reguł określających strukturę danych (definicja danych)
+- zbiór reguł określających operacje na danych (operowanie danymi)
+- zbiór reguł określających poprawne stany bazy danych (integralność danych)
+
+Struktura danych - w modelu relacyjnym wszystkie informacje przechowywane są w realizacjach
+
+Macierz (tabela) - reprezentuje relacje w systemach komputerowych. Ma następujące własności:
+- każdy wiersz (krotka) reprezentuje opis nowej encji - bytu, np. osoba, samochód, itp.
+- opis krotki dokonywany jest za pomocą uporządkowanego zbioru atrybutów, których kolejność jest istotna - wynika z wzorca krotki
+- wszystkie krotki w tabeli muszą pasować do tego wzorca
+- każda krotka jest unikalna (inna)
+- kolejność krotek w tabeli nie ma znaczenia
+- atrybuty opisywane są przez nazwę opisową atrybutu (ustala projektant bazy danych) i nazwę typu danych, do którego krotka przynależy (zależna od systemu zarządzania bazami danych i od norm)
+- wartości atrybutów muszą być atomowe (nie ma krotki w krotce)
+- ilość kolumn wyznacza ilość atrybutów opisujących encje
+
+Relacyjny model danych - relacyjna struktura danych, dostępność operatorów algebry relacji umożliwiających tworzenie, wyszukiwanie i modyfikowanie danych. Możliwość definiowania ograniczeń integralnościowych i referencyjnych
+
+Więzy integralności - to ograniczenia kojarzone z obiektami bazy danych. Typy więzów:
+- unikalność krotek relacji - niepowtarzalność krotek w relacji, zapewniają to elementy nazywane kluczem głównym
+- oganiczenia referencynje - możliwość ograniczenia wartości atrybutu na podstawie zbioru atrybutów w innej tabeli, odpowiadają za to elementy nazywane kluczem obcym
+- integralność krotki - dziedzina atrybutu, format wartości, związki między atrybutami w krotce
+- dodatkowe więzy integralności pochodzą ze środowiska modelowanego przez bazę danych
+
+Klucz główny i klucze obce - w modelu relacyjnym, każda krotka (wiersz) musi być unikalna. Osiąga się to za pomocą klucza głównego. Klucz główny to kolumna (klucz prosty) lub grupa kolumn (klucz złożony), która jednoznacznie identyfikuje wiersz tabeli. Każda relacja musi mieć dokładnie jeden klucz główny. Klucz obcy to taka kolumna (lub grupa kolumn), która zawiera odnośniki do klucza głównego z innej tablicy
+
+Algebra relacji - zbiór operacji zdefiniowanychw modelu relacyjnym. Operacje działają na relacjach i wynikiem każdej operacji jest nowa relacja. Sekwencja operacji algebry relacji to wyrażenie algebry relacji, którego wynikiem jest również relacja. Podstawowe operacje: selekcja, projekcja, połączenie, operatory mnogościowe, operatory zaawansowane.
+
+Operacje na da![obrazek](images/9.1.PNG)
+
 ## 10. Wymień interfejsy przewodowe stosowane w systemach czujnikowych i omów jeden szczegółowo.
+Interfejsy przewodowe stosowane w systemach czujnikowych:
+- I<sup>2</sup>C
+- 1-wire
+- CAN
+- RS232
+- RS485
+
+I<sup>2</sup>C:
+- szeregowa, dwukierunkowa magistrala służąca do przesyłania danych w urządzeniach elektronicznych
+- każde urządzenie ma swój adres
+- brak potrzeby projektowania interfejsu magistrali - wbudowany w układ scalony
+- znana również pod akronimem IIC (Inter-Integrated Circuit) - pośredniczy pomiędzy układami scalonymi
+- określa dwie najniższe warstwy modelu odniesienia OSI: warstwę fizyczną i warstwę łącza danych
+- 2 kierunkowe linie: dane (SDA - Serial Data) oraz sygnał zegara (SCL - Serial Clock)
+- podczas transmisji danych, sygnał na linii SDA musi być stabilny (nie może się zmieniać), gdy linia SCL jest w stanie wysokim
+- zmiany linii SDA podczas stanu wysokiego linii SCL są interpretowane jako sygnały sterujące (control)
+- każdą transmisję inicjuje warunek start i kończy warunek stop
+- maksymalna przepływność 100 kbit/s w trybie STANDARD i 400 kbit/s w trybie FAST
+- maksymalna liczba urządzeń - typowo 40 (liczba układów scalonych limitowana jest tylko jej maksymalną pojemnością 400 pF)
+- maksymalna odległość transmisji - 5 m
+- zintegrowanie adresowania z protokołem transferu danych - całkowite programowe zorientowanie aplikacji
+- układy scalone mogą być dodawane lub usuwane z systemu bez używania dodatkowych układów na magistrali
+- uproszczone wykrywanie błędów i diagnostyka magistrali
+- czas konieczny na stworzenie oprogramowania może być zredukowany poprzez wykorzystaie bibliotek z najczęściej używanymi funkcjami
+- transmisja magistralą jest odporna na zakłócenia zewnętrzne
+
+1-wire:
+- asynchroniczny interfejst szeregowy
+- interfejs elektroniczny jak również protokół komunikacyjny pomiędzy urządzeniami
+- do komunikacji używana jest tylko jedna linia danych (oraz linia zerowa), dwukierunkowa
+- odbiornik może być zasilany bezpośrednio z linii danych, wykorzystując zasilanie pasożytnicze
+- odbiornik wyposażony jest w kondensator o pojemności 800 pF, który jest ładowany z linii danych - następnie energia w nim zgromadzona używana jest do zasilania odbiornika
+- prosty protokół wymiany danych: inicjalizacja (zerowanie magistrali), wysłanie (zapis) zera, wysłanie (zapis) jedynki, odczyt bitu
+- maksymalna długość jednego segmentu do 300 m (ez regeneratorów - przy niskiej prędkości transmisji)
+- do przesłania danych wykorzystywana może być zwykła skrętka telefoniczna
+- każde urządzenie dostaje unikatowy adres na etapie produkcji
+- struktura magistrali z jednym masterem i wieloma slave'ami
+- możliwość pracy multimaster
+- prosta struktura linii połączeń
+- mała ilość komponentów dodatkowych
+- łatwa zmiana konfiguracji sieci
+- duża obciążalność linii (dużo urządzeń)
+- wolniejsze i tańsze od I<sup>2</sup>C
+- używany do komunikacji pomiędzy niewielkimi urządzeniami, takimi jak: termometry cyfrowe, instrumenty metrologiczne, sterowniki ładowania akumulatorów, zamki elektroniczne typu iButton
+- standardowa prędkość pracy to od ok. 16 do 142 kb/s
+
+CAN:
+- CAN - ang. Controller Area Network
+- został opracowany do zastosowań w motoryzacji (np. ABS)
+- asynchroniczna magistrala szeregowa
+- transmisja sygnałów następuje za pomocą prostej linii różnicowej (dwuprzewodowa skrętka)
+- brak adresowania węzłów (identyfikator ramki określa zawartość oraz priorytet)
+- tryb multimaster
+- detekcja i obsługa błędów
+- popularna (obecna w przemyśle od wielu lat)
+- sprzętowa implementacja protokołu
+- proste medium transmisyjne
+- tolerancja uszkodzeń (uszkodzony węzeł zostaje wykluczony)
+- prędkość do 1 Mb/s na dystansie do 40 m
+- prędkość spada wraz ze wzrostem odległości
+
+RS232:
+- magistrala komunikacyjna przeznaczona do szeregowej transmisji danych
+- transmisja odbywa się asynchronicznie z prędkością 20 kb/s (maksymalnie 115 kb/s)
+- maksymalna odległość - 15 m
+- możliwy jest tryb pracy full duplex, czyli transmisja oraz odbiór w tym samym czasie
+- jeden nadajnik i jeden odbiornik (point-to-point), a zatem maksymalna liczba urządzeń to 2
+- specyfikacja napięcia definiuje "1" logiczną jako napięcie -3 do -15 V, zaś "0" to napięcie +3 do +15 V
+
+RS485:
+- transmisja asynchroniczna szeregowa dwuprzewodową skrętką
+- dopasowanie impedancyjne linii transmisyjnej na końcach (120 Ohm)
+- podłączenie do 32 urządzeń (nadajniki lub odbiorniki)
+- dalsza rozbudowa możliwa, ale wymaga powielaczy transmisji (repeaterów)
+- maksymalna prędkość transmisji: ok. 35 Mb/s (przewody do 12 m)
+- maksymalna długość segmentu magistrali: 1,2 km (prędkość 100 kb/s)
+- w jednej chwili nadawać może tylko jeden nadajnik
+- wydziela się jedno urządzenie pełniące rolę kontrolera transmisji (inicjuje transmisję, żadne urządzenie poza kontrolerem nie może samoczynnie nadawać)
+
+
 ## 11. Zasada działania, właściwości i zastosowania wybranych elementów systemu optoelektronicznego (źródła, modulatory, detektory).
 ## 12. Architektury procesorów rdzeniowych mikrokontrolerów.
 ## 13. W jaki sposób można zrealizować w zakresie b. w. cz. czystą reaktancję?
