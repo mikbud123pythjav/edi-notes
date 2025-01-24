@@ -339,12 +339,121 @@ RS485:
 - w jednej chwili nadawać może tylko jeden nadajnik
 - wydziela się jedno urządzenie pełniące rolę kontrolera transmisji (inicjuje transmisję, żadne urządzenie poza kontrolerem nie może samoczynnie nadawać)
 
-
 ## 11. Zasada działania, właściwości i zastosowania wybranych elementów systemu optoelektronicznego (źródła, modulatory, detektory).
+1. Żródła
+    Istnieje wiele rodzajów źródeł promieniowania optycznego, między innymi zwykła żarówka, promienie słoneczne, płomień świecy, w zasadzie każde ciało emituje promieniowanie termiczne. Jednak w systemach optoelektronicznych naczęściej wykorzystuje się:
+    - Dioda elektroluminescencyjna LED (Light Emitting Diode) - element półprzewodnikowy, emitujący promieniowanie w zakresie światła widzialnego, podczerwieniu i ultrafioletu. Zasada jej działania opiera się na wykorzystaniu zjawiska emisji spontanicznej, która polega na wydzieleniu energii w postaci fotonu podczas gdy wzbudzony elektron samoczynnie wraca do niższego poziomu energetycznego. Emisja spontaniczna jest emisją nieuporządkowaną. Stanowi to przyczynę istotnej wady diody LED, którą jest emisja promieniowania o stosunkowo szerokim widmie ciągłym. Utrudnia to przesyłanie informacji na większe odległości, między innymi przez  zjawisko dyspersji. Zaletami są: małe wymiary, niewielki pobór prądu, łatwe sterowanie, niska temperatura pracy. Zastosowanie: oświetlenie, wyświetlacze, izolacja galwaniczna.
+    - Dioda laserowa LD (Laser Diode) - wykorzystuje zjawisko emisji wymuszonej, polegającej na tym, że w sytuacji, w której elektron znajduje się na wyższym poziomie energetycznym, to wystarczająco długo nie zmieni tego stanu, jeśli nie zostanie pobudzony innym fotonem. W momencie pojawienia się fotonu inicjującego elektron będzie emitował energię w postaci fotonu o bardzo podobnych parametrach. Aby doprowadzić do efektywnej akcji laserowej należy zapewnić odpowiednie warunki energetyczne co uzyskuje się poprzez "pompowanie energii", czyli np. doprowadzenie prądu zasilania o stosunkowo dużym natężeniu oraz zapewnia się wewnętrzny układ rezonatora optycznego (np. w postaci dwóch zwierciadeł), odpowiedzialnego za sprzężenie ułatwiające akcję laserową oraz scalenie fotonów w jedną spójną wiązkę. Emisja wymuszona jest zjawiskiem o dużym stopniu uporządkowania, dzięki czemu wiązka promieniowania ma niewielką rozbieżność kątową oraz mały rozrzut długości fali. Zaletami są: spójna wiązka, duże uzyskiwane moce, łatwość modulacji prądem sterującym. Zastosowania: CD, DVD, wskaźniki laserowe, łączność światłowodowa, wojskowe systemy celownicze, aparatura w optoelektronice
+2. Modulatory
+    Modulacją światła nazywamy zmiany w czasie parametrów fali świetlnej (amplituda, faza, częstotliwość, polaryzacja, kierunek). Modulatorem jest urządzenie, które te zmiany wymusza. Wyróżnia się charakter modulacji: wewnętrzny oraz zewnętrzny. Pierwszy z nich (wewnętrzny) dotyczy źródła promieniowania, kiedy istnieje możliwość modulacji za pomocą np. napięcia zasilania emitera. Modulacja zewnętrzna wykorzystuje wpływ modulatora znajdującego się w torze propagacji promieniowania. Najprostszym sposobem modulacji wiązki optycznej jest umieszczenie w torze komunikacyjnym przeszkody, która tę wiązkę zatrzyma lub wymusi zmianę kierunku propagacji (czujniki ruchu, zagięcia światłowodów), jednak w systemach optoelektronicznych najczęściej wyróżnia się modulatory elektrooptyczne, akustooptyczne i magnetooptyczne:
+    - Modulator elektrooptyczny - promieniowanie optyczne przechodzi przez transparentny układ modulatora, którego parametry optyczne zależą od zjawisk elektrycznych. Jednym z rozwiązań jest wykorzystanie efektu Pockels'a oraz efektu Kerra, które polegają na powiązaniu współczynnika załamania ośrodka od napięcia między dwiema elektrodami. Dzięki temu w prosty sposób można zmieniać polaryzację wiązki. Pewną niedogodnością stosowania komórek elektrooptycznych jest konieczność zasilania ich wysokim napięciem. Zastosowanie: sprzęganie urządzeń elektronicznych z optycznymi w Telekomunikacji
+    - Modulator akustooptyczny - załóżmy, że w pewnym ośrodku optycznym rozchodzi się fala akustyczna. Powoduje ona lokalne i okresowe zmiany gęstości danego ośrodka optycznego. Zjawisko to jest przyczyną lokalnych zmian współczynnika załamania. W rezultacie powstaje przestrzenna siatka dyfrakcyjna, którą można wykorzystać do modulacji źwiadła. Modulatory akustooptyczne działają wolniej niż elektrooptyczne. Zastosowanie: mikrofon światłowodowy
+    - Modulator magnetooptyczny - zmienia parametry fali świetlnej pod wpływem pola magnetycznego. Wykorzystuje zjawisko Faradaya polegające na obrocie płaszczyzny polaryzacji światła spolaryzowanego liniowo, podczas przechodzenia promieniowania optycznego przez ośrodek, w którym istnieje pole magnetyczne. Zastosowanie: układy przepuszczające światło tylko w jednym kierunku - izolatory optyczne
+3. Detektory
+    Detektorem promieniowania optycznego w systemie optoelektronicznym nazywamy przyrząd zdolny do wykrycia emisji wiązki optycznej lub zmian w jej parametrach. Niektóre z nich to: fotorezystor, fotoogniwo, fototyrystor lub fotopowielacz:
+    - Fotorezystor - element półprzewodnikowy, w którym pod wpływem oświetlenia następuje zmiana jego przewodności niezależnie od polaryzacji przyłożonego napięcia. Pod wpływem oświetlenia zostają wzbudzone elektrony poszczególnych atomów półprzewodnika. Ładunki te mają charakter elektronów swobodnych, co powoduje wzrost kondensacji nośników elektrycznych, a więc w półprzewodniku możliwy jest przepływ prądu elektrycznego o wyższym natężeniu. Zalety: niezawodność działania, niska cena, duża obciążalność prądowa
+    - Fotodioda - jest zbudowana podobnie do prostej diody krzemowej pracującej w polaryzacji zaporowej. Dodatkowo umieszcza się w niej soczewkę, umożliwiając dostarczenie promieniowania optycznego do obszaru złącza PN. Prąd przepływający przez złącze jest proporcjonalny do natężenia oświetlenia a czułość elementu charakteryzuje się stałością w szerokim zakresie. Zastosowania: stosowana w układach ogniw fotowoltaicznych, bezprzewodowa komunikacja optyczna
+
 ## 12. Architektury procesorów rdzeniowych mikrokontrolerów.
+Najważniejszym elementem mikrokontrolera jest jednostka centralna nazywana procesorem (procesor rdzeniowy - CPU). Jego podstawową cechą jest przynależność do klasy synchronicznych układów sekwencyjnych.
+
+Synchroniczność polega na tym, że zmiana stanów wewnętrznych i sygnałów pojawiających się na wyjściach mikrokontrolera zachodzi tylko w chwilach określonych przez sygnał synchronizujący zwany sygnałem zegarowym
+
+Sekwencyjnośc oznacza, że stan w kolejnym cyklu zegara zależy nie tylko od sygnałów wejściowych, ale także od stanów poprzednich układu.
+
+Zadaniem jednostki centralnej jest cykliczne wykonywanie operacji zawartych w kodzie programu stworzonego przez programistę. Program taki przechowywany jest w pamięci mikrokontrolera.
+
+Mikroprocesory ze względu na architekturę można podzielić na kilka sposobów, dwa najważniejsze to:
+- W zależności od typu struktury pamięci (lub inaczej mapy pamięci) wyróżniamy architektury:
+    - Harwardzką - Jest bardziej złożona, gdyż wykorzystuje dwie szyny adresowe - rozdziela szynę pamięci danych oraz szynę pamięci programu. Szyny te mogą być różnej szerokości i występuje oddzielny obszar adresowania obu pamięci. Zaletą tego rozwiązania jest możliwość jednoczesnego pobierania nowego rozkazu z pamięci programu oraz wykonywanie operacji na pamięci danych, czyli tzw. potokowość. Pozwala to na skrócenie cyklu zegarowego a co za tym idzie, zwiększenie szybkości pracy. Wadą jest brak możliwości stosowania techniki LUT (Look-Up Table) czyli wykorzystywania fragmentu pamięci programu jako tablicy stałych, stąd istnieją modyfikacje tej architektury, które pozwalają na odwoływanie się do pamięci programu a nawet jej modyfikację z poziomu mikroprocesora. Ponad to nie można indeksować przesyłanych danych z pamięci ROM do RAM, co powoduje, że nie ma możliwości budowania tabel współczynników stałych w pamięci ROM. Dodatkowe cechy:
+        - oddzielone pamięci programu i danych mogą być wykonane w różnych technologiach, posiadać różną długość dłowa oraz odmienną strukturę adresowania
+        - pamięć programu jest zazwyczaj większa niż pamięć danych
+        - pamięci instrkcji i danych zajmują inną przestrzeń adresów
+        architektura stosowana w mikrokontrolerach jednoukładowych, procesorach DSP oraz przy dostępie do procesora do pamięci cache
+    - Von-Neumanna - Mikrokontrolery w większości zbudowane są według architektury von-Neumanna. Zakłada ona brak podziału przestrzeni adresowej na pamięć programu i pamięć danych, czyli mamy jednolitą przestrzeń adresową. Takie podejście charakteryzuje się prostotą i przejrzystościa, upraszcza proces pisania programów, gdyż dostęp do danych programu i rozkazów odywa się za pomocą tych samych instrukcji i tych samych trybów adresowania. Umożliwia to także samomodyfikację programu oraz wykorzystanie pamięci programu jako zamiennik pamięci EEPROM lub ROM. Wady: dłuższy cykl zegarowy ze względu na konieczność naprzemiennego pobierania danych i rozkazów na tej samej szynie, stąd coraz częściej wykorzystuje się architekturę harwardzką przy budowie mikrokontrolerów. Dodatkowe cechy:
+        - informacje przechowywane są w komórkach pamięci o jednakowym rozmiarze zawierających jednostki informacji
+        - komórki pamięci tworzą uporządkowany zbiór z jednoznacznie przypisanyim numerami zwanymi adresami
+        - zawartość komórki pamięci może zmienić tylko procesor w wyniku wykonania rozkazu zapisu słowa do pamięci
+        - dane i rozkazy zakodowane są za pomocą liczb - baz analizy programu trudno stwierdzić czy dany obszar pamięci zawiera dane czy rozkazy
+    - Zmodyfikowaną Harwardzką
+        - obszary pamięci ROM i RAM są rozdzielone, ale mają taką samą długość słowa
+        - pobieranie instrukcji i danych odbywa się po 1 magistrali
+        - dzięki multiplekserom i odpowiedniej organizacji magistrali pamięci ROM i RAM możliwe jest z pewnymi ograniczeniami przesyłanie stalych z RAM do rejestrów i pamięci operacyjnej
+
+- Mikroprocesory w zależności od typu listy instrukcji (inaczej listy rozkazów), wyróżniamy architektury:
+    - RISC (Reduced Instruction Set Computer)
+        - procesor zbudowany zgodnie z architekturą Harwardzką
+        - procesor wykorzystuje przetwarzanie potokowe (pipeling) w celu zwiększenia szybkości wykonywania programu
+        - zbiór realizowanych instrukcji jest ograniczony (do kilkudziesięciu) i spełnia warunki ortogonalności
+        - zwiększenie liczby rejestrów roboczych
+        - wprowadza system load-store (tylko 2 instrukcje odwołujące się do pamięci)
+        - Ortogonalność polega na:
+            - każda instrukcja może operować na dowolnym rejestrze roboczym
+            - każda instrukcja może wykorzystywać dowolny tryb adresowania argumentów
+            - brak ukrytych powiązań między instrukcjami (efektów ubocznych), które powodowałyby nieprzewidziane reakcje systemu w zależności od kontekstu użycia rozkazów w programie
+            - kody rozkazów i formaty instrukcji są zunifikowane - instrukcje zajmują w pamięci programu taką samą liczbę bajtów
+    - CISC (Coplex Instruction Set Computer)
+        - złożone specjalistyczne rozkazy (instrukcje), które do wykonania wymagają od kilku do kilkunastu cykli zegara
+        - szeroka gama trybów adresowania
+        - dużo odwołań do pamięci
+        - w przeciwieństwie do RISC rozkazy mogą operować bezpośrednio na pamięci (zamiast przesyłania wartości do rejestrów i operowania na nich)
+        - potokowość jest utrudniona, ale 1 instrukcja może wykonywać wiele operacji
+        - powyższe właściwości powodują, że dekoder rozkazów jest bardzo rozbudowany
+        - w tej architekturze pojedynczy rozkaz mikroprocesora wykonuje kilka operacji niskiego poziomu - pobieranie danych z pamięci, operację artytmetyczną i zapis do pamięci
+
 ## 13. W jaki sposób można zrealizować w zakresie b. w. cz. czystą reaktancję?
+Reaktancja (opór bierny) to wielkość charakteryzująca obwód elektryczny zawierający element o charakterze pojemnościowym lub indukcyjnym. Jest urojoną częścią impedancji i oznacza się ją na ogół symbolem X, może przyjmować wartości dodatnie i ujemne.
+
+Idealna reaktancja elementu elektrycznego występuje, gdy jest równa co do modułu impedancji tego elementu, czyli nie występuje składowa rzeczywista - rezystancja.
+<div style="text-align: center;">|Z|=|R_jX|<sub>R=0</sub>=|jX|=|X|</div>
+
+Idealnej reaktancji nie da się w rzeczywistości zrealizować, ponieważ w każdym przypadku występują pewne składowe pasożytnicze. W przypadku wysokich częstotliwości idealną reaktancję można modelować przy pomocy idealnej linii zakończonej rozwarciem lub zwarciem.
+
+Rysunek 3 przedstawia sposób transformacji impedancji linii z rys. 1 i 2. Kierując się w prawo dla linii zwartej należy przejść od rozwarcia (180 st.) do zwarcia (0 st.) skracając linię o λ/4 i na odwrót (od 0 st. do 180 st.) w przypadku linii rozwartej. W ten sposób zauważyć można, że dodatnia reaktancja (indukcyjność) znajduje się w górnej części wykresu Smitha, a reaktancja ujemna (pojemnośc) w jego dolnej części.
+
+Rys. 1.
+![obrazek](images/13.1.PNG)
+
+Rys. 2.
+![obrazek](images/13.2.PNG)
+
+Rys. 3.
+![obrazek](images/13.3.PNG)
+
 ## 14. Do czego służy strojnik pojedynczy i jaka jest jego zasada działania?
+Strojnik pojedynczy to odcinek linii transmisyjnej zwarty lub rozwarty na końcu i dołączony do obwodu w sposób równoległy lub szeregowy. Jego zadaniem jest przetransformowanie końcowego zwarcia lub rozwarcia na odpowiednią wartość reaktancji (strojnik szeregowy) lub susceptacji (strojnik równoległy) zapewniającej dopasowanie obciążenia do linii.
+![obrazek](images/14.1.PNG)
+
+Strojnik charakteryzuje się dwoma parametrami: długością l oraz odległością od obciążenia d
+
+W układach BWCZ niedopasowanie impedancji polega na tym, że impedancja obciążenia dołączonego do toru transmisyjnego widziana na zaciskach wejściowych tego toru jest inna niż impedancja charaktrystyczna linii transmisyjnej. Występowanie niedopasowania skutkuje niezerowym współczynnikiem odbicia, co prowadzi do powstawania fali stojącej.
+Gdy fala rozchodząca się w linii trafi na ośrodek o innej impedancji niż impedancja ośrodka, w którym się rozchodzi, ulega częściowemu lub całkowitemu odbiciu. W efekcie fala przekazuje mniejszą energię do docelowego obwodu. Ponadto obecność fali postępującej i wstecznej prowadzi do powstawania fali stojącej o własnościach lokalnego gromadzenia energii, co oznacza obniżenie pojemności energetycznej linii.
+Aby zapobiec występowaniu tego zjawiska, stosuje się układy dopasowujące impedancję obciążenia do impedancji linii, do których zalicza się strojnik pojedynczy.
+
+Dopasowanie obciążenia oznacza więc w praktyce kompensację odbić. Jedną z najczęściej stosowanych metod jest metoda polagająca na wprowadzeniu do toru sygnałowego dodatkowych odbić kompensujących te, które wynikają bezpośrednio z własności układu dopasowywanego. Staramy się dopasować przy pomocy bezstratnych elementów takich jak reaktacje oraz odcinki linii transmisyjnych. Ta metoda kompensacji prowadzi do spełnienia dwóch kluczowych warunków:
+1. Długość odcinka linii transmisyjnej ma zapewnić przeniesienie punktu odpowiadającego impedancji Z<sub>L</sub> bądź admitacji Y<sub>L</sub>, obciążenia na okrąg jednostkowy na wykresie Smitha r=1 lub g=1 (r=R/Z<sub>c1</sub>, g=G/y<sub>c</sub>)
+2. Wartość reaktacji dobieramy tak, aby skompensować pozostałą urojoną impedancji/admitancji obciążenia widzianą w płaszczyźnie włączenia reaktancji kompensującej.
+
+Impedancja widziana na zaciskac w płaszczyźnie A ma pewną część. Po zastosowaniu strojnika pojedynczego w odpowiedniej długości od obciążenia Z<sub>A</sub> (takiej, która zapewni przesunięcie rezystancji znormalizowanej r<sub>A</sub> na okrąg r=1), pozostanie do skompensowania jedynie część urojona impedancji obciążenia. Reaktancję strojnika ustawia się poprzez wybranie odpowiedniej długości strojnika (zależy to od długości fali rozchodzącej się w linii). Linia, z której wykonany jest strojnik, jest zwarta lub rozwarta na końcu (wybór zależy od charakteru reaktancji, czy reprezentuje pojemność czy indukcyjność). Nadając jej pewną długość, powodujemy pojawienie się reaktacji, która skompensuje wartość reaktacji, która jest widziana w płaszczyźnie B.
+![obrazek](images/14.2.PNG)
+
 ## 15. Omów ramy stosowania rachunku wskazów w analizie obwodów i niekonkurencyjności rachunku Laplace'a w tych ramach.
+1. Rachunek wskazowy stosujemy w analizie obwodów liniowych, jeżeli pobudzenia w nich występujące są:
+    - sygnałami okresowymi spełniającymi warunku Dirichleta - czyli takimi sygnałami, dla których można wskazać taki skończony jego fragment, że sygnał jako całość powstaje przez powielenie tego fragmentu.
+    - sygnałami prawie okresowymi, które można przedstawić za pomocą sygnałów okresowych spełniających warunki Dirichleta - warunki dostateczne - jeżeli sygnał okresowy spełnia warunki Dirichleta, to można go przedstawić za pomocą szeregu Fouriera
+
+2. Warunki stosowania analizy wskazowej w analizie obwodów liniowych:
+    - pobudzenie x(t) jest sinusoidalne:
+<div style="text-align: center;"> x(t)=X<sub>m</sub>cos(w<sub>o</sub>t + a) </div>
+
+    - pobudzenie trwa nieskończenie długo, czyli:
+<div style="text-align: center;"> t∈(-∞, ∞) </div>
+
+    - układ znajduje się w stanie nieustalonym - odpowiedź zależy od pobudzenia oraz właściwości układu (nie zależy od warunków początkowych)
+    - układ jest stabilny - dla każdego ograniczonego sygnału pobudzającego x(t), odpowiedź układu y(t) również jest ograniczona (stabilność BIBO)
+
+TBD...
+
 ## 16. Sformułuj i zapisz w postaci ogólnej prawa Kirchoffa oraz podaj własne przykłady ilustrujące treść tych praw.
 
 # **Pytania dla Telekomunikacji**
