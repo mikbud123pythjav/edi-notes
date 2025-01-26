@@ -461,6 +461,10 @@ TBD...
 
 ## 16. Sformułuj i zapisz w postaci ogólnej prawa Kirchoffa oraz podaj własne przykłady ilustrujące treść tych praw.
 
+![obrazek](images/16.1.PNG)
+![obrazek](images/16.2.PNG)
+![obrazek](images/16.3.PNG)
+
 # **Pytania dla Telekomunikacji**
 ## 1. Omów problem analizy i syntezy zasobów w sieci telekomunikacyjnej.
 ## 2. Scharakteryzuj architektury wspierające realizację sieci IP QoS.
