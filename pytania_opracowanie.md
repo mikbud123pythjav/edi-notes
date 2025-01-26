@@ -51,6 +51,11 @@ FFT (Fast Fourier Transform) - szybkie przekształcenie Fouriera
 ![obrazek](images/2.2.PNG)
 
 ## 3. Twierdzenia Schannona i ich interpretacje.
+![obrazek](images/3.1.png)
+![alt text](images/3.2.png)
+![alt text](images/3.3.png)
+![alt text](images/3.4.png)
+
 ## 4. Usługi w sieci telekomunikacyjnej - klasyfikacja, charakterystyki, jakość usług.
 Usługa telekomunikacyjna - przesyłanie na odległość informacji (w postaci mowy, muzyki, znaków, pisma, rysunków, fotografii, obrazów, danych, itp.) za pomocą sygnałów elektrycznych, optycznych lub radiowych. Świadczona każdorazowo przez operatora (dzięki jego urządzeniom i organizacji) na rzecz użytkowników i na ich żądanie. Usługi telekomunikacyjne można podzielić na usługi podstawowe (ang. basic services), usługi dodatkowe (ang. supplementary services) i usługi dodane. Usługi podstawowe i dodatkowe są opisane w specyfikacji standardu, na którym oparta jest sieć.
 
@@ -255,7 +260,7 @@ Więzy integralności - to ograniczenia kojarzone z obiektami bazy danych. Typy 
 
 Klucz główny i klucze obce - w modelu relacyjnym, każda krotka (wiersz) musi być unikalna. Osiąga się to za pomocą klucza głównego. Klucz główny to kolumna (klucz prosty) lub grupa kolumn (klucz złożony), która jednoznacznie identyfikuje wiersz tabeli. Każda relacja musi mieć dokładnie jeden klucz główny. Klucz obcy to taka kolumna (lub grupa kolumn), która zawiera odnośniki do klucza głównego z innej tablicy
 
-Algebra relacji - zbiór operacji zdefiniowanychw modelu relacyjnym. Operacje działają na relacjach i wynikiem każdej operacji jest nowa relacja. Sekwencja operacji algebry relacji to wyrażenie algebry relacji, którego wynikiem jest również relacja. Podstawowe operacje: selekcja, projekcja, połączenie, operatory mnogościowe, operatory zaawansowane.
+Algebra relacji - zbiór operacji zdefiniowanych w modelu relacyjnym. Operacje działają na relacjach i wynikiem każdej operacji jest nowa relacja. Sekwencja operacji algebry relacji to wyrażenie algebry relacji, którego wynikiem jest również relacja. Podstawowe operacje: selekcja, projekcja, połączenie, operatory mnogościowe, operatory zaawansowane.
 
 Operacje na da![obrazek](images/9.1.PNG)
 
@@ -479,5 +484,28 @@ TBD...
 ## 6. Narażenia zagrażające aparaturze z komputerami wbudowanymi - rodzaje, główne źródła, sposoby przeciwdziałania.
 ## 7. Zasady rozprowadzania zasilania obwodów w aparaturze z komputerami wbudowanymi - odsprzęganie, filtracja zakłóceń.
 ## 8. Automatyczne regulacje w układach z otoczenia komputerów wbudowanych - rodzaje, cele stosowania, sposoby realizacji.
+
 ## 9. Funkcje elementów systemu operacyjnego Linux dla systemu wbudowanego: toolchain, bootloader, jądro, system plików.
+<!-- 
+<b>Toolchain</b> - zestaw narzędzi do kompilacji kodu źródłowego do
+plików wykonywalnych na platformie docelowej:
+<p>* kompilator</p>
+<p>* linker</p>
+<p>* biblioteki współdzielone</p>
+<b>Podstawowe definicje:</b>
+<p>* build: platforma lokalna, na której realizowana jest kompilacja</p>
+(na przykład PC z dystrybucji Debiana)
+<p>* target: platforma docelowa (na przykład Raspberry Pi)</p>
+<p>* host: OS dostarczający wirtualnego srodowiska</p>
+<p>* guest: OS w srodowisku wirtualnym</p>
+
+<b>Bootloader - Program rozruchowy</b>
+<p>* inicjalizuje system</p>
+<p>* ładuje jądro OS do pamięci</p>
+
+Uruchamianie systemu polega
+na przejściu kilku faz, w których 
+coraz więcej zasobów jest
+dostępnych dla programu rozruchowego. -->
+
 ## 10. Opisz metory pomiarowe stosowane w radarze meteorologicznym.
